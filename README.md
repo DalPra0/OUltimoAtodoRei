@@ -105,12 +105,12 @@ func triggerSanityEffects() {
 ### 🏛️ **THE GALLERY SCENE**
 *Where art becomes nightmare...*
 
-<img src="https://via.placeholder.com/400x250/2a2a2a/FFD700?text=GALLERY+SCREENSHOT" alt="Gallery Scene" style="border: 1px solid #FFD700;">
+<img src="https://github.com/user-attachments/assets/9f642dcb-2c7a-4a00-80fa-9eb9362f512f" alt="Gallery Scene" style="border: 1px solid #FFD700;">
 
 ### 🎭 **THE THEATER INVESTIGATION** 
 *Ancient secrets hide in the shadows...*
 
-<img src="https://via.placeholder.com/400x250/2a2a2a/FFD700?text=THEATER+SCREENSHOT" alt="Theater Scene" style="border: 1px solid #FFD700;">
+<img src="https://github.com/user-attachments/assets/ebacdce5-65e5-40cc-ac1d-d5e479b4b12e" alt="Theater Scene" style="border: 1px solid #FFD700;">
 
 ### 🎲 **DICE SYSTEM IN ACTION**
 *Fate decides in the cosmic void...*
@@ -329,8 +329,8 @@ FebreAmarela/
 
 *"The King in Yellow watches over this code..."*
 
-![Stars](https://img.shields.io/github/stars/[seu-usuario]/o-ultimo-ato-do-rei?style=social&color=yellow)
-![Forks](https://img.shields.io/github/forks/[seu-usuario]/o-ultimo-ato-do-rei?style=social&color=yellow)
+![Stars](https://img.shields.io/github/stars/DalPra0/OUltimoAtodoRei?style=social&color=yellow)
+![Forks](https://img.shields.io/github/forks/DalPra0/OUltimoAtodoRei?style=social&color=yellow)
 
 **⚠️ WARNING: This project may cause temporary reality distortion**
 
