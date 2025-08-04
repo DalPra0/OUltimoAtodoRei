@@ -121,24 +121,27 @@ func triggerSanityEffects() {
 
 ---
 
-## 🚀 **GETTING STARTED**
+## 🚀 **PLAY NOW**
+
+<div align="center">
+
+### 📱 **Available on TestFlight**
+
+[![TestFlight](https://img.shields.io/badge/TestFlight-Available_Now-yellow?style=for-the-badge&logo=apple&logoColor=black)](https://testflight.apple.com/join/CzQgMcyv)
+
+**Scan to Enter the Cosmic Horror:**
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://testflight.apple.com/join/CzQgMcyv&bgcolor=000000&color=FFD700" alt="TestFlight QR Code" style="border: 3px solid #FFD700; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);">
+
+*🔗 [Direct Link: https://testflight.apple.com/join/CzQgMcyv](https://testflight.apple.com/join/CzQgMcyv)*
+
+</div>
 
 ### 📋 **Requirements**
 - iOS 16.0+
-- Xcode 15.0+
-- Swift 5.9+
+- iPhone/iPad with TestFlight app
 - Device orientation: **Landscape**
-
-### 🛠️ **Installation**
-
-```bash
-# Clone the repository
-git clone https://github.com/[seu-usuario]/o-ultimo-ato-do-rei.git
-
-# Open in Xcode
-cd o-ultimo-ato-do-rei
-open FebreAmarela.xcodeproj
-```
+- Headphones recommended for full atmospheric experience
 
 ### 🎵 **Audio Setup**
 ```
@@ -316,9 +319,9 @@ FebreAmarela/
 
 <div align="center">
 
-## 🌟 **EXPERIENCE THE COSMIC HORROR**
+## 🌟 **ENTER THE COSMIC HORROR**
 
-[![Download](https://img.shields.io/badge/TestFlight-Available-yellow?style=for-the-badge&logo=apple&logoColor=black)](link-do-testflight)
+[![TestFlight](https://img.shields.io/badge/Download_on-TestFlight-yellow?style=for-the-badge&logo=apple&logoColor=black)](https://testflight.apple.com/join/CzQgMcyv)
 
 ---
 
