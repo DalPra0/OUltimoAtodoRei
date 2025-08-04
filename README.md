@@ -18,7 +18,7 @@
 ## 🎭 **THE INVESTIGATION BEGINS**
 
 <div align="center">
-<img src="https://via.placeholder.com/800x400/1a1a1a/FFD700?text=GAME+SCREENSHOT+HERE" alt="O Último Ato do Rei - Screenshot" style="border: 2px solid #FFD700; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);">
+<img src="https://github.com/user-attachments/assets/c1ad62a7-76f3-4515-8756-11a0faeeec05" alt="O Último Ato do Rei - Screenshot" style="border: 2px solid #FFD700; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);">
 </div>
 
 Entre na pele de um **detetive** investigando mortes misteriosas ligadas a uma **seita obscura**. Cada escolha molda sua **sanidade** e determina seu destino neste thriller psicológico onde a realidade se desfaz diante de **forças antigas e incompreensíveis**.
@@ -115,7 +115,7 @@ func triggerSanityEffects() {
 ### 🎲 **DICE SYSTEM IN ACTION**
 *Fate decides in the cosmic void...*
 
-<img src="https://via.placeholder.com/400x250/2a2a2a/FFD700?text=DICE+SYSTEM+GIF" alt="Dice System" style="border: 1px solid #FFD700;">
+<img src="https://github.com/user-attachments/assets/3b7d2f8c-c826-4555-87b8-463a7981f61e" alt="Dice System" style="border: 1px solid #FFD700;">
 
 </div>
 
@@ -338,5 +338,5 @@ FebreAmarela/
 
 *Built during the NanoChallenge 2025*  
 *Where madness meets mobile development* 🌑📱
-
+"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn..."
 </div>
