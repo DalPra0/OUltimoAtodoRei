@@ -1,0 +1,288 @@
+{
+  "scenes": [
+    {
+      "id": "cena1",
+      "title": "O Apartamento do Artista",
+      "image": "apartamento.jpg",
+      "text": "A chamada no rádio veio como 'possível suicídio'. O endereço, um prédio decadente no bairro dos artistas. O cheiro de tinta a óleo e algo mais... algo metálico e doce, paira no ar. Seu parceiro, oficial Miller, está na porta, com o rosto pálido.\n\nDentro do apartamento, a cena é um caos de criatividade e desespero. Um homem, o artista, jaz no chão. E em todas as paredes, pintado com uma urgência maníaca, está o mesmo símbolo. Uma espiral complexa, de um amarelo doentio, que parece... pulsar sob a luz da sua lanterna.",
+      "choices": [
+        {
+          "text": "Examinar o corpo e o símbolo.",
+          "test": {
+            "type": "investigacao",
+            "difficulty": 12,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "addClue": "diario",
+            "goto": "cena2c",
+            "text": "Você foca nos detalhes. A tinta amarela não é comum. E perto do corpo, você nota um pequeno diário de couro, quase escondido."
+          },
+          "fail": {
+            "addMadness": "intrusao1",
+            "goto": "cena1_retry",
+            "text": "O símbolo na parede parece se contorcer e, por um instante, você tem a certeza de que ele te encarou de volta. Você recua, o coração disparado, a imagem queimada na sua retina."
+          }
+        },
+        {
+          "text": "Abordar a testemunha de forma direta.",
+          "test": {
+            "type": "intimidacao",
+            "difficulty": 12,
+            "bonus": "intimidador"
+          },
+          "success": {
+            "addClue": "teatro",
+            "goto": "cena2b",
+            "text": "Sua voz firme a tira do transe. Ela gagueja: 'Ele... ele falava de uma peça... O Rei de Amarelo... no Teatro Orpheum.'"
+          },
+          "fail": {
+            "addMadness": "intrusao1",
+            "goto": "cena1_retry",
+            "text": "Sua abordagem agressiva só a aterroriza mais. Ela começa a chorar histericamente. Você não conseguiu nada."
+          }
+        },
+        {
+          "text": "Acalmar a testemunha.",
+          "test": {
+            "type": "persuasao",
+            "difficulty": 12,
+            "bonus": "persuasivo"
+          },
+          "success": {
+            "addClue": "galeria",
+            "goto": "cena2a",
+            "text": "Você fala com calma. Ela se abre: 'Arthur... ele estava indo para uma exposição hoje. Na Galeria Elysium.'"
+          },
+          "fail": {
+            "addMadness": "intrusao1",
+            "goto": "cena1_retry",
+            "text": "Suas palavras gentis não surtem efeito. 'Ele vem... o Rei... ele vem para todos nós', ela sussurra, antes de se encolher em silêncio."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cena1_retry",
+      "title": "Nova Tentativa",
+      "text": "Você não obteve sucesso na sua abordagem. Escolha outra ação para prosseguir com a investigação.",
+      "goto": "cena1"
+    },
+    {
+      "id": "cena2a",
+      "title": "A Galeria Elysium",
+      "image": "galeria.jpg",
+      "text": "A Galeria Elysium é menos um lugar de arte e mais um mausoléu para ideias. O silêncio é pesado, quebrado apenas por sussurros e o tilintar de taças. As pinturas de Arthur, o artista morto, estão por toda parte. Elas são... difíceis de encarar. Seu convite na mão parece queimar.\n\n**Julian Blackwood:** \"Detetive. Eu soube da trágica passagem de Arthur. Um talento perdido. O que o traz à minha humilde galeria? Veio apreciar a última coleção do mestre?\"",
+      "clueRequired": "galeria",
+      "choices": [
+        {
+          "text": "Confrontar Julian sobre Arthur.",
+          "test": {
+            "type": "raciocinio",
+            "difficulty": 13,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "addClue": "ritual",
+            "goto": "progresso_ritual",
+            "text": "Seus olhos brilham com interesse. 'Direto ao ponto. Gosto disso.' Ele sussurra: 'Arthur ia participar de um evento privado. Para verdadeiros colecionadores. No porão do Teatro Orpheum, à meia-noite.'"
+          },
+          "fail": {
+            "addMadness": "intrusao2",
+            "goto": "cena2a_retry",
+            "text": "Ele ri. 'Detetive, todos os artistas da cidade vêm à minha galeria. Isso não prova nada. Sinto muito, não posso ajudá-lo.'"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cena2a_retry",
+      "title": "Galeria – Nova Tentativa",
+      "text": "Julian não revelou nada útil. Talvez tentar de outra forma seja mais eficiente.",
+      "goto": "cena2a"
+    },
+    {
+      "id": "cena2b",
+      "title": "O Teatro Orpheum",
+      "image": "teatro.jpg",
+      "text": "O Teatro Orpheum está morto há décadas. Mas a corrente na porta lateral foi cortada recentemente. O lobby em ruínas testemunha pichações e cartazes rasgados da peça 'O Rei de Amarelo'. O silêncio aqui é profundo, quase como se o lugar estivesse esperando por algo.",
+      "clueRequired": "teatro",
+      "choices": [
+        {
+          "text": "Ir direto para o palco principal.",
+          "test": {
+            "type": "investigacao",
+            "difficulty": 13,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "addClue": "ritual",
+            "goto": "progresso_ritual",
+            "text": "Você sobe no palco. A poeira é espessa, exceto em um ponto. Seguindo marcas no assoalho, encontra uma alça de metal quase invisível. Você pressiona o ouvido contra a madeira e ouve um cântico baixo."
+          },
+          "fail": {
+            "addMadness": "intrusao3",
+            "goto": "cena2b_retry",
+            "text": "Você busca sinais de atividade, mas sente apenas que está sendo observado. Nada mais aparece."
+          }
+        },
+        {
+          "text": "Explorar os bastidores.",
+          "test": {
+            "type": "raciocinio",
+            "difficulty": 13,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "addClue": "ritual",
+            "goto": "progresso_ritual",
+            "text": "Nos bastidores, um camarim está curiosamente limpo. Sobre a mesa, uma máscara pálida e um manto de seda amarela. Você pega e lê anotações manuscritas: 'Meia-noite. Porão. Apenas para os que viram o Signo.'"
+          },
+          "fail": {
+            "addMadness": "intrusao3",
+            "goto": "cena2b_retry",
+            "text": "As palavras dançam na página e você ouve uma melodia de flauta em sua cabeça. Você joga o roteiro no chão."
+          }
+        },
+        {
+          "text": "Subir para o balcão superior.",
+          "test": {
+            "type": "percepcao",
+            "difficulty": 12,
+            "bonus": "persuasivo"
+          },
+          "success": {
+            "addClue": "ritual",
+            "goto": "progresso_ritual",
+            "text": "Do alto, você nota uma cadeira virada intencionalmente na primeira fila. Debaixo dela, um panfleto amassado: 'A Ascensão do Rei. Meia-noite. O Porão. Apenas para os que viram o Signo.'"
+          },
+          "fail": {
+            "addMadness": "intrusao3",
+            "goto": "cena2b_retry",
+            "text": "Você sobe as escadas rangentes mas não encontra nada além de assentos cobertos por panos brancos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cena2b_retry",
+      "title": "Teatro – Nova Tentativa",
+      "text": "Nenhum indício apareceu. Tente outra abordagem.",
+      "goto": "cena2b"
+    },
+    {
+      "id": "cena2c",
+      "title": "O Diário do Artista",
+      "image": "diario.jpg",
+      "text": "De volta ao seu escritório, o pequeno diário de couro parece frio ao toque. Você abre a primeira página e lê as datas escritas por Arthur:\n\n15 de Julho: 'A cidade parece uma aquarela cinza e sem vida...'\n20 de Julho: 'Encontrei um livro estranho chamado \"O Rei de Amarelo\"...'\n23 de Julho: 'Julian Blackwood me apresentou ao círculo dele...'\n\nVocê hesita antes da última página. Algo em você anseia por saber o destino final do artista.",
+      "clueRequired": "diario",
+      "choices": [
+        {
+          "text": "Ler até o fim.",
+          "test": {
+            "type": "raciocinio",
+            "difficulty": 14,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "addClue": "ritual",
+            "addMadness": "fascinacao",
+            "goto": "progresso_ritual",
+            "text": "Você lê o último rabisco febril: 'MEIA-NOITE! O PORÃO DO ORPHEUM!' Sua mente é marcada com a `Fascinação Sombria`."
+          },
+          "fail": {
+            "addMadness": "intrusao4",
+            "goto": "cena2c_retry",
+            "text": "As palavras na página se embaralham. Sua cabeça dói e você fecha o diário, atordoado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cena2c_retry",
+      "title": "Diário – Nova Tentativa",
+      "text": "A leitura foi intensa demais. Talvez você precise de alguns segundos para retomar o fôlego.",
+      "goto": "cena2c"
+    },
+    {
+      "id": "progresso_ritual",
+      "title": "Avanço da Investigação",
+      "text": "Você conectou mais uma peça do quebra-cabeça. Só falta mapear todas as pistas para descobrir o porão.",
+      "checkAllClues": [
+        "galeria",
+        "teatro",
+        "diario"
+      ],
+      "goto": "cena3"
+    },
+    {
+      "id": "cena3",
+      "title": "O Covil da Seita",
+      "image": "ritual.jpg",
+      "text": "Você chegou ao porão cavernoso do Teatro Orpheum. Velas formam um círculo em torno de Julian Blackwood, vestido com um manto de seda amarela. Os cultistas encapuzados cantam um cântico hipnótico.",
+      "choices": [
+        {
+          "text": "Interferir nas runas que alimentam o ritual.",
+          "test": {
+            "type": "raciocinio",
+            "difficulty": 15,
+            "bonus": "inspetor"
+          },
+          "success": {
+            "goto": "final_bom"
+          },
+          "fail": {
+            "goto": "final_ruim"
+          }
+        },
+        {
+          "text": "Atravessar o círculo e atacar Julian diretamente.",
+          "test": {
+            "type": "forca",
+            "difficulty": 15,
+            "bonus": "intimidador"
+          },
+          "success": {
+            "goto": "final_bom"
+          },
+          "fail": {
+            "goto": "final_ruim"
+          }
+        },
+        {
+          "text": "Usar as próprias crenças deles para criar o caos.",
+          "test": {
+            "type": "persuasao",
+            "difficulty": 15,
+            "bonus": "persuasivo"
+          },
+          "success": {
+            "goto": "final_bom"
+          },
+          "fail": {
+            "goto": "final_ruim"
+          }
+        },
+        {
+          "text": "Isto é loucura. Fugir e salvar a própria vida.",
+          "goto": "final_neutro"
+        }
+      ]
+    },
+    {
+      "id": "final_bom",
+      "title": "Final Bom: O Sobrevivente Marcado",
+      "text": "O ritual foi interrompido. Julian Blackwood e seus cultistas foram presos, mas as acusações oficiais foram mundanas: sequestro, formação de quadrilha. Ninguém acreditaria na verdade. A cidade está segura... por enquanto.\n\nVocê olha para as suas mãos. Elas ainda tremem de vez em quando. Às vezes, quando olha para um texto por muito tempo, as letras parecem dançar. Você salvou a cidade, mas uma parte de você ficou para trás naquele porão."
+    },
+    {
+      "id": "final_ruim",
+      "title": "Final Ruim: A Vítima",
+      "text": "A luz amarela explode e preenche tudo. Não há dor. Apenas... aceitação. Seu nome, sua vida, suas memórias... tudo se dissolve em uma verdade maior e mais terrível.\n\nO mundo que você conhecia era uma mentira. Uma fina casca sobre a verdadeira realidade de Carcosa. E agora, você vê. Você finalmente vê."
+    },
+    {
+      "id": "final_neutro",
+      "title": "Final Neutro: O Ciclo Continua",
+      "text": "Você fugiu. Não por covardia, mas por instinto de sobrevivência. A seita continua, o ritual talvez tenha tido sucesso sem você.\n\nÀs vezes, você vê um flash de amarelo na multidão. A cidade pode estar condenada, mas você vive. Por enquanto..."
+    }
+  ]
+}

@@ -1,0 +1,1138 @@
+{
+  "story": {
+    "scenes": [
+      {
+        "id": "cena1",
+        "image": "apartamento",
+        "dialogues": [
+          {
+            "text": "A chamada no rádio veio como 'possível suicídio'. O endereço, um prédio decadente no bairro dos artistas.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O cheiro de tinta a óleo e algo mais... algo metálico e doce, paira no ar.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Seu parceiro, oficial Miller, está na porta, com o rosto pálido.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Detetive. Que bom que chegou. A... a testemunha que ligou está ali.",
+            "speaker": "Miller",
+            "portrait": "miller_portrait"
+          },
+          {
+            "text": "Dentro do apartamento, a cena é um caos de criatividade e desespero. Um homem, o artista, jaz no chão.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "E em todas as paredes, pintado com uma urgência maníaca, está o mesmo símbolo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Uma espiral complexa, de um amarelo doentio, que parece... pulsar sob a luz da sua lanterna.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O que você faz primeiro, detetive?",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "examinar_corpo",
+            "text": "Examinar o corpo e o símbolo",
+            "goTo": "cena1_examinar",
+            "test": {
+              "skill": "investigacao",
+              "difficulty": 12
+            }
+          },
+          {
+            "id": "abordar_testemunha_direto",
+            "text": "Abordar a testemunha de forma direta",
+            "goTo": "cena1_intimidar",
+            "test": {
+              "skill": "intimidacao",
+              "difficulty": 13
+            }
+          },
+          {
+            "id": "acalmar_testemunha",
+            "text": "Acalmar a testemunha",
+            "goTo": "cena1_persuadir",
+            "test": {
+              "skill": "persuasao",
+              "difficulty": 11
+            }
+          }
+        ]
+      },
+      {
+        "id": "cena1_examinar",
+        "image": "apartamento",
+        "dialogues": [
+          {
+            "text": "Você foca nos detalhes. A tinta amarela não é comum.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Perto do corpo, você nota um pequeno diário de couro, quase escondido.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "PISTA ADICIONADA: Diário do Artista.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "speaker": "Sistema",
+            "portrait": null,
+            "text": "Você encontrou o Convite da Galeria Elysium.",
+            "action": "add_clue",
+            "clue": "Convite da Galeria Elysium"
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_diario",
+            "text": "Examinar o diário",
+            "goTo": "cena2C"
+          }
+        ]
+      },
+      {
+        "id": "cena1_intimidar",
+        "image": "apartamento",
+        "dialogues": [
+          {
+            "text": "Sua voz firme a tira do transe.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele... ele falava de uma peça... O Rei de Amarelo... no Teatro Orpheum.",
+            "speaker": "Testemunha",
+            "portrait": "testemunha_portrait"
+          },
+          {
+            "text": "PISTA ADICIONADA: Ingresso para o Teatro Orpheum.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "speaker": "Sistema",
+            "portrait": null,
+            "text": "Você encontrou o Ingresso do Teatro Orpheum.",
+            "action": "add_clue",
+            "clue": "Ingresso do Teatro Orpheum"
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_teatro",
+            "text": "Ir ao Teatro Orpheum",
+            "goTo": "cena2B"
+          }
+        ]
+      },
+      {
+        "id": "cena1_persuadir",
+        "image": "apartamento",
+        "dialogues": [
+          {
+            "text": "Você fala com calma. Ela se abre:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Arthur... ele estava indo para uma exposição hoje. Na Galeria Elysium.",
+            "speaker": "Testemunha",
+            "portrait": "testemunha_portrait"
+          },
+          {
+            "text": "Ele disse que ia mostrar ao mundo a verdade.",
+            "speaker": "Testemunha",
+            "portrait": "testemunha_portrait"
+          },
+          {
+            "text": "PISTA ADICIONADA: Convite para a Galeria Elysium.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "speaker": "Sistema",
+            "portrait": null,
+            "text": "Você encontrou o Diário do Artista.",
+            "action": "add_clue",
+            "clue": "Diário do Artista"
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_galeria",
+            "text": "Ir à Galeria Elysium",
+            "goTo": "cena2A"
+          }
+        ]
+      },
+      {
+        "id": "cena2A",
+        "image": "galeria",
+        "dialogues": [
+          {
+            "text": "A Galeria Elysium é menos um lugar de arte e mais um mausoléu para ideias.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O silêncio é pesado, quebrado apenas por sussurros e o tilintar de taças.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "As pinturas de Arthur, o artista morto, estão por toda parte. Elas são... difíceis de encarar.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O homem no centro da sala, que só pode ser o curador Julian Blackwood, nota sua presença.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele se despede de seus convidados e caminha em sua direção. O sorriso dele não alcança seus olhos frios.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Detetive. Eu soube da trágica passagem de Arthur. Um talento perdido.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "O que o traz à minha humilde galeria? Veio apreciar a última coleção do mestre?",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          }
+        ],
+        "choices": [
+          {
+            "id": "apresentar_pista",
+            "text": "Arthur estava vindo para cá antes de morrer",
+            "goTo": "cena2A_raciocinio",
+            "test": {
+              "skill": "raciocinio",
+              "difficulty": 12
+            }
+          },
+          {
+            "id": "intimidar_julian",
+            "text": "Chega de papo furado. Um homem morreu",
+            "goTo": "cena2A_intimidacao",
+            "test": {
+              "skill": "intimidacao",
+              "difficulty": 14
+            }
+          },
+          {
+            "id": "persuadir_julian",
+            "text": "Eu só quero entender o gênio dele",
+            "goTo": "cena2A_persuasao",
+            "test": {
+              "skill": "persuasao",
+              "difficulty": 13
+            }
+          }
+        ]
+      },
+      {
+        "id": "cena2A_raciocinio",
+        "image": "galeria",
+        "dialogues": [
+          {
+            "text": "Seus olhos brilham com interesse. Direto ao ponto. Gosto disso.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Ele se inclina e sussurra:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Arthur ia participar de um evento privado. Para verdadeiros colecionadores.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "No porão do Teatro Orpheum, à meia-noite. Se tiver coragem, talvez ainda haja um lugar para você.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2A_intimidacao",
+        "image": "galeria",
+        "dialogues": [
+          {
+            "text": "O sorriso dele vacila.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Cuidado, detetive. Há forças em jogo que fariam um homem como você se encolher de medo.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Ele te encara.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Mas já que insiste... vá ao porão do Teatro Orpheum à meia-noite.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Veja com seus próprios olhos o que homens corajosos buscam.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2A_persuasao",
+        "image": "galeria",
+        "dialogues": [
+          {
+            "text": "Ele te estuda.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você... você talvez entenda. Arthur estava transcendendo.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Ele viu a beleza no Rei de Amarelo.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Se quiser ver o próximo passo da jornada dele, esteja no porão do Teatro Orpheum à meia-noite.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2B",
+        "image": "teatro",
+        "dialogues": [
+          {
+            "text": "O Teatro Orpheum está morto há décadas. A testemunha deve ter se enganado.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Mas quando você chega perto, vê que a corrente na porta lateral foi cortada recentemente.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O ar que sai de dentro é frio e tem o cheiro de poeira e mofo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você entra. O lobby está em ruínas.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Pôsteres rasgados de uma peça antiga, 'O Rei de Amarelo', cobrem as paredes como pele descascada.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O silêncio aqui é profundo, quase como se estivesse esperando por algo.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_palco",
+            "text": "Ir direto para o palco principal",
+            "goTo": "cena2B_palco",
+            "test": {
+              "skill": "investigacao",
+              "difficulty": 13
+            }
+          },
+          {
+            "id": "explorar_bastidores",
+            "text": "Explorar os bastidores",
+            "goTo": "cena2B_bastidores",
+            "test": {
+              "skill": "raciocinio",
+              "difficulty": 12
+            }
+          },
+          {
+            "id": "subir_balcao",
+            "text": "Subir para o balcão superior",
+            "goTo": "cena2B_balcao",
+            "test": {
+              "skill": "percepcao",
+              "difficulty": 11
+            }
+          }
+        ]
+      },
+      {
+        "id": "cena2B_palco",
+        "image": "teatro",
+        "dialogues": [
+          {
+            "text": "Você sobe no palco. A poeira é espessa, exceto em um ponto.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você nota marcas de arranhões no assoalho, como se algo pesado tivesse sido arrastado.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Seguindo as marcas, você encontra uma alça de metal quase invisível. Uma porta de alçapão, trancada.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você pressiona o ouvido contra a madeira e ouve... um zumbido baixo, quase um cântico, vindo de baixo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2B_bastidores",
+        "image": "teatro",
+        "dialogues": [
+          {
+            "text": "Você vai para trás das cortinas pesadas e empoeiradas.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "É um labirinto de cordas, cenários antigos e escuridão.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Uma das salas de camarim, no entanto, está diferente.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Um camarim estranhamente limpo. Um espelho, uma cadeira.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Sobre a mesa, uma máscara pálida e um manto de seda amarela. Ao lado, um roteiro encadernado em couro.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você resiste ao impulso de ler o texto bizarro da peça e foca nas anotações feitas à mão na margem.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "São instruções, um passo a passo. A última anotação na página final diz:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O verdadeiro palco está preparado. A plateia aguarda. Meia-noite, no porão.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2B_balcao",
+        "image": "teatro",
+        "dialogues": [
+          {
+            "text": "Do alto, você tem uma visão geral do teatro.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "É por isso que você nota algo que não veria do chão:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "uma das cadeiras na primeira fila está virada, encarando o resto da plateia vazia, e não o palco.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "É deliberado. Você desce para investigar e, debaixo da cadeira, encontra um panfleto amassado:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A Ascensão do Rei. Meia-noite. O Porão. Apenas para os que viram o Signo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena2C",
+        "image": "diario1",
+        "dialogues": [
+          {
+            "text": "De volta ao seu escritório, o silêncio da noite é seu único companheiro.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O pequeno diário de couro parece frio ao toque.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Esta é a forma mais direta de entrar na mente do artista, mas também a mais perigosa.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você respira fundo e começa a ler.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "virar_pagina1",
+            "text": "Virar a página",
+            "goTo": "cena2C_pagina1"
+          }
+        ]
+      },
+      {
+        "id": "cena2C_pagina1",
+        "image": "diario1",
+        "dialogues": [
+          {
+            "text": "15 de Julho. A mesma rotina. A cidade parece uma aguarela cinza e sem vida.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Pintei por horas hoje e não produzi nada além de lixo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Sinto-me vazio, uma concha oca. Preciso de algo. Uma faísca.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "virar_pagina2",
+            "text": "Virar a página",
+            "goTo": "cena2C_pagina2"
+          }
+        ]
+      },
+      {
+        "id": "cena2C_pagina2",
+        "image": "diario2",
+        "dialogues": [
+          {
+            "text": "20 de Julho. Encontrei-o hoje. Num sebo empoeirado. Um livro estranho.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Uma peça chamada 'O Rei de Amarelo'. As palavras... não são apenas palavras.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Elas cantam. Elas se movem. Quando li o primeiro ato, vi cores que não sabia que existiam.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "virar_pagina3",
+            "text": "Virar a página",
+            "goTo": "cena2C_pagina3"
+          }
+        ]
+      },
+      {
+        "id": "cena2C_pagina3",
+        "image": "diario2",
+        "dialogues": [
+          {
+            "text": "A caligrafia na página seguinte é mais apressada, quase febril.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Sua cabeça começa a doer levemente enquanto você lê.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "23 de Julho. Julian Blackwood me viu. Ele viu o Signo que desenhei na minha tela e sorriu.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele entende. Ele me apresentou ao círculo dele. Eles também viram o Rei!",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Não estou louco! Eles me mostraram como a arte pode ser uma chave.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "virar_pagina_final",
+            "text": "Virar para a última página",
+            "goTo": "cena2C_final"
+          }
+        ]
+      },
+      {
+        "id": "cena2C_final",
+        "image": "diario3",
+        "dialogues": [
+          {
+            "text": "Você hesita antes de virar a última página.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ler isso parece uma violação, uma invasão psíquica da qual você talvez não retorne ileso.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Para encontrar a verdade, você precisa ver o que ele viu. Custe o que custar.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você termina a última página, mas a um custo terrível.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A obsessão de Arthur deixou um eco permanente na sua mente.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "VOCÊ ADQUIRIU O TRAÇO DE LOUCURA: Fascinação Sombria.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A partir de agora, você sentirá uma vontade inexplicável de interagir com os elementos mais perturbadores de cada cena.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Sua percepção da realidade está permanentemente alterada.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A caligrafia é um rabisco quase ilegível:",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "ESTA NOITE! A performance! O palco não é a galeria, é apenas o vestíbulo!",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O verdadeiro público espera onde a cortina caiu pela última vez!",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O Rei terá sua corte e eu serei o primeiro a me ajoelhar! MEIA-NOITE! O PORÃO DO ORPHEUM!",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "PISTA ADICIONADA: Local do Ritual (Porão do Teatro Orpheum).",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "ir_covil",
+            "text": "Ir ao porão do Teatro Orpheum",
+            "goTo": "cena3"
+          }
+        ]
+      },
+      {
+        "id": "cena3",
+        "image": "covil",
+        "dialogues": [
+          {
+            "text": "O ar no porão é pesado, elétrico. Ao entrar, o cântico dos cultistas reverbera não nos seus ouvidos, mas dentro do seu crânio.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Por um instante, você não vê pessoas com mantos, mas sim silhuetas humanoides feitas de escuridão e fumaça, com olhos que são pequenas estrelas amarelas.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você pisca forte, e eles voltam a ser apenas pessoas, mas a imagem não sairá da sua cabeça.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "No centro do círculo, em uma plataforma de pedra, está Julian Blackwood.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele não usa mais seu terno caro, mas um manto de seda amarela.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Diante dele, uma escultura de metal retorcido pulsa com uma luz amarela doentia, a mesma que você viu no apartamento.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Julian te vê na entrada. Ele não parece surpreso, apenas... satisfeito.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele abre os braços em um gesto de boas-vindas.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Detetive. Eu sabia que você viria. Sempre há um que não consegue se contentar com o véu da realidade.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Bem-vindo à verdadeira estreia. Bem-vindo à corte do Rei.",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          },
+          {
+            "text": "Julian sorri, acreditando que você já perdeu.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O que fará agora, mortal? Lutará contra a maré? Ou se afogará na glória de Carcosa?",
+            "speaker": "Julian Blackwood",
+            "portrait": "julian_portrait"
+          }
+        ],
+        "choices": [
+          {
+            "id": "interferir_runas",
+            "text": "Interferir nas runas que alimentam o ritual",
+            "goTo": "cena3_runas"
+          },
+          {
+            "id": "atacar_julian",
+            "text": "Atravessar o círculo e atacar Julian diretamente",
+            "goTo": "cena3_atacar"
+          },
+          {
+            "id": "criar_caos",
+            "text": "Usar as próprias crenças deles para criar o caos",
+            "goTo": "cena3_persuadir"
+          },
+          {
+            "id": "fugir",
+            "text": "Isto é loucura. Fugir e salvar a própria vida",
+            "goTo": "final_neutro"
+          }
+        ]
+      },
+      {
+        "id": "cena3_runas",
+        "image": "covil",
+        "dialogues": [
+          {
+            "text": "Você ignora Julian e os cultistas. O poder não vem dele, vem dos símbolos no chão!",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você chuta um braseiro de velas sobre a principal runa de giz.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A cera quente apaga o símbolo, quebrando o circuito.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A luz amarela da escultura morre com um gemido. O ritual falhou.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "final_bom",
+            "text": "Continuar",
+            "goTo": "final_bom"
+          }
+        ]
+      },
+      {
+        "id": "cena3_atacar",
+        "image": "covil",
+        "dialogues": [
+          {
+            "text": "Sem uma palavra, você avança. Você empurra os cultistas para o lado como se fossem bonecos de pano e sobe na plataforma.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você acerta um soco em Julian, quebrando sua concentração e jogando-o no chão.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O cântico para. A luz da escultura se apaga. O ritual está quebrado.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "final_bom",
+            "text": "Continuar",
+            "goTo": "final_bom"
+          }
+        ]
+      },
+      {
+        "id": "cena3_persuadir",
+        "image": "covil",
+        "dialogues": [
+          {
+            "text": "Você ergue a voz, cheia de uma autoridade insana.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "TOLOS! O Rei me mandou! Ele não quer um ritual, ele quer silêncio para sua chegada!",
+            "speaker": "Detetive",
+            "portrait": "detective_portrait"
+          },
+          {
+            "text": "Sua convicção os abala. Alguns cultistas param de cantar, olhando confusos para Julian.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A harmonia se quebra, a energia se dissipa. O ritual falha.",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": [
+          {
+            "id": "final_bom",
+            "text": "Continuar",
+            "goTo": "final_bom"
+          }
+        ]
+      },
+      {
+        "id": "final_bom",
+        "image": "apartamento",
+        "dialogues": [
+          {
+            "text": "O ritual foi interrompido. Julian Blackwood e seus cultistas foram presos, mas as acusações oficiais foram mundanas: sequestro, formação de quadrilha.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ninguém acreditaria na verdade. A cidade está segura... por enquanto.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você olha para as suas mãos. Elas ainda tremem de vez em quando. Você dorme pouco.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Às vezes, quando olha para um texto por muito tempo, as letras parecem dançar.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você salvou a cidade, mas uma parte de você ficou para trás naquele porão.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você sabe que o Rei de Amarelo não foi derrotado. Ele apenas perdeu uma batalha.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "E agora, você é um dos poucos que conhece a verdade.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Uma sentinela solitária na fronteira da loucura, esperando pelo próximo ato.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "FIM DE JOGO - O SOBREVIVENTE MARCADO",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": []
+      },
+      {
+        "id": "final_ruim",
+        "image": "covil",
+        "dialogues": [
+          {
+            "text": "A luz amarela explode e preenche tudo. Não há dor. Apenas... aceitação.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Seu nome, sua vida, suas memórias... tudo se dissolve em uma verdade maior e mais terrível.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O mundo que você conhecia era uma mentira. Uma fina casca sobre a verdadeira realidade de Carcosa.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "E agora, você vê. Você finalmente vê.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "O caso do Detetive Miles Corbin nunca foi solucionado.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Ele se tornou apenas mais um fantasma na cidade, uma história contada para assustar os novatos.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Mais uma vítima anônima na corte do Rei de Amarelo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "FIM DE JOGO - A VÍTIMA",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": []
+      },
+      {
+        "id": "final_neutro",
+        "image": "teatro",
+        "dialogues": [
+          {
+            "text": "Você vê a cena. A seita, o ritual, a luz sobrenatural.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Isso está além de você, além da polícia, além de tudo.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você recua silenciosamente para as sombras e foge pelas escadas, deixando a loucura para trás.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você não olha para trás.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você correu. Não por covardia, mas por instinto de sobrevivência.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você deixou que a loucura consumisse a si mesma naquela noite.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você não sabe o que aconteceu no porão depois que você saiu. Você não quer saber.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Às vezes, você vê um flash de amarelo na multidão. Um símbolo rabiscado em um beco.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "A seita pode ter se dispersado, ou pode estar mais forte do que nunca. Você não sabe.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "Você sobreviveu. Mas agora vive com o conhecimento do que se esconde nas sombras.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "E com a certeza de que, um dia, as sombras virão te procurar.",
+            "speaker": null,
+            "portrait": null
+          },
+          {
+            "text": "FIM DE JOGO - O CICLO CONTINUA",
+            "speaker": null,
+            "portrait": null
+          }
+        ],
+        "choices": []
+      }
+    ]
+  }
+}
+
